@@ -1,0 +1,17 @@
+all:
+  children:
+    webservers:
+      hosts:
+        labvm1:
+        labvm2:
+    dbservers:
+      hosts:
+        labvm3:
+    ubuntuservers:
+      hosts:
+        labvm1:
+        labvm2:
+    CentOS:
+      hosts:
+        labvm3:
+

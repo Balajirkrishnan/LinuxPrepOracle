@@ -1,0 +1,17 @@
+---
+#================================================
+# PLaybook to prep linux host for DB installation
+#
+# 1. Set Kernel parameter
+#
+#
+#================================================
+- name: Display pre installation 
+  debug:
+    msg:
+      - 'This playbook is for setting up a system for ORacle DB requirement {{ansible_date_time.iso8601}}:'
+
+- name: Preperation task for hosting oracle database
+  block:
+    - import_tasks: oracle_kernelparams.yml
+  become: yes
